@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "nutnet-backend2",
+  "private_key_id": "6d1130f585a32422278bfa36fb542ef60f7b4673",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC3Kw6veMaDEnzZ\nnosUDGq/ZZUSolW+IKqUw+FVoMfAw2uEjQ4MTT0EgCh/atjrcdFmPJ6ONg3kC2ma\nd1HF8dR3jzVPLfmeKV5xXbBAsmL0dp8UEBbZJOYqOsbWNKJa+7tA+LwC4EAChDTU\nJZ09xHG6rXJkZpZDUSVIkw9mhrMiQYeAFQPNfGHxh2JnBzopeUc9qIdzZ+FSqIDm\npx9PxDPkGA1yq4HHMV5CevfaNLNE6tfge+RaaSTCMdIxwetlOesV3gutO0wEzSq2\nSRlhig92A7k0gZlskHEuYZsg+GYtBKJrxmgKuSzYdYw/apdkgNc7082AHQ3pRn+H\n5kZPMu9fAgMBAAECggEANGIReJhTOU/zua7QOoMUkjkkaWhYmh+weQwN6NWq2tNo\nb8eBQX5jWWKnck0lzSvHRXRHqgcGcPXclSrTjYcMCsc/aS4OSa+uDUDMc6wwhZZZ\nBz1Us3QMiP43ODJkTh3Y3wtjhXUJiU6y5wr8zZndJpSM9u6pwYW24msASAN0vnJA\nDQrUBW16v74bX33HrxrxjC1cLlGI7W9GP7l/xsIGQeOuZRMw8rzhbjL/VPIjNHwE\nPMVUQF/1swN8kq4VernzUcIkV8vfJrlLhdHhVaXeWlcDT7eSIjXDZtJgi9F7fV4P\ntopxAu8JeDEIrIxQVChjrdlbEKC+BVfTdGEsasWmEQKBgQDmSQ0j9jRfUZuZUeib\nW3obEgCaGOEHRXttuvtRyzoJ5lGsYQj5XCDKfVZZWn4BcOh9gcOLNzUODRW8mMwh\n72iOMkcWwaEZUbbDOCcHdC6iJspCK/1/7mZV464OinI3MVwPTLI8OZ51CSzZA2J6\nheBWj33K7AxbqmoudWwbHAEtjwKBgQDLnxzI/jx1lnbblr1QCvRIzfb3OftS5Cmr\n3L9HvW5qfURX8rlPASLkMSalpKk+2MQpVnuicQWGXJWiADYt3l67E8WIJjrTgpX7\nG8xDa2CTi19w8fQK04bLLoo57dntoLQwvhXntXxReZFy34VU24DBRqqPJ6oxGbe1\nAQNAT3XZMQKBgE9NrunIeqasquH01B7UNMunum9Wy/++DNBwCOZVDyqjl1K+o+GD\nuYMiAJ+Ky0Phxx6ZlmaV3350QR0OnZW+JYp6hAKxMbJPcpnt93rYpsqOgy6giY8J\n4VIIs0MsqEKbi/F03xhgW1JAk6I0STCac/Q7O/2qpmLW3/QZ2d3IGhu/AoGAG9XZ\neoR+wVhbUTNvF8UXlehKDYvolnFIXQ0lPOphcL9FG3y75lfybB1n+hbjaAr77ea7\nqf4nUjHP5sB+p5CRhKN0SmNngUiFtjkbmE/SePkBiBAbW2uFLrti+/5O31Qrrcoe\ndnlx0DV9M6XotSv4kvNVF5LFikbIvT6xMhZqttECgYEA4cWBRf3nHKhT+IS23wzT\nJFvs+YvOt+8w0i5uAzzFHiOlS8lHKJRNHyQTdfoWNnWxN1phm6rjiQ9vaJyC98/t\nw/wU93dUCjeb+oUUmSrW0Phe2FL9lJiEytXUPEld2EmSpvUUj5FkhucrnSWirDd3\nyLTGAAgnnhuis24JzQ9g97o=\n-----END PRIVATE KEY-----\n",
+  "client_email": "googlesheets@nutnet-backend2.iam.gserviceaccount.com",
+  "client_id": "102675023735889728654",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/googlesheets%40nutnet-backend2.iam.gserviceaccount.com"
+}
