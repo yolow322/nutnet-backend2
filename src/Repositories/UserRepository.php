@@ -14,7 +14,12 @@ class UserRepository implements UserRepositoryInterface
 
     public function __construct()
     {
-        $this->db = new \PDO('pgsql:host=localhost;port=5432;dbname=postgres;user=postgres;password=789741');
+        $host = 'ec2-54-224-175-142.compute-1.amazonaws.com';
+        $port = '5432';
+        $dbname = 'dfapr7kgqlrfrn';
+        $user = 'ijqawxufrdqfmu';
+        $password = '6023523a8b3be63ad07224ff92e1321c9ff0d9dd384c59a4a5cad23b5bd539ca';
+        $this->db = new \PDO("pgsql:host=$host;port=$port;dbname=$dbname;user=$user;password=$password");
     }
 
     /**
