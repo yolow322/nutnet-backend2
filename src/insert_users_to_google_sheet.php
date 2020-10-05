@@ -9,7 +9,7 @@ $googleClient->setApplicationName('nutnet-backend2');
 $googleClient->setScopes([Google_Service_Sheets::SPREADSHEETS]);
 $googleClient->setAccessType('offline');
 try {
-    $googleClient->setAuthConfig(__DIR__ . '\nutnet-backend2.json');
+    $googleClient->setAuthConfig(__DIR__ . '/nutnet-backend2.json');
 } catch (Google_Exception $e) {
     $jsonOutput = [
         'code' => 404,
