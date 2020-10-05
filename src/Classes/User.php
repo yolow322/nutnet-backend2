@@ -49,14 +49,4 @@ class User
     {
         return $this->age;
     }
-
-    public function nameValidation(): bool
-    {
-        return preg_match('/^[а-яёА-ЯЁ\s]+$/u', $this->name) && strlen($this->name) <= 35;
-    }
-
-    public function surnameValidation(): bool
-    {
-        return preg_match('/^[а-яёА-ЯЁ\s]+$/u', $this->surname) && strlen($this->surname) <= 35;
-    }
 }
