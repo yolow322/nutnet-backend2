@@ -2,7 +2,7 @@
 
 require_once '../vendor/autoload.php';
 
-use AppRepositories\UserRepository;
+use App\Repositories\UserRepository;
 
 $googleClient = new Google_Client();
 $googleClient->setApplicationName('nutnet-backend2');
