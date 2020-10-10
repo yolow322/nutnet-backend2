@@ -25,8 +25,8 @@ class Validator
     private function RulesForPostInputs(): array
     {
         return [
-            'userName' => preg_match('/^[a-zA-Zа-яёА-ЯЁ\s\-]+$/u', $this->validator[0]),
-            'userSurname' => preg_match('/^[a-zA-Zа-яёА-ЯЁ\s\-]+$/u', $this->validator[1]),
+            'userName' => preg_match('/^[a-zA-Zа-яёА-ЯЁ\s\-]{1,34}$/u', $this->validator[0]),
+            'userSurname' => preg_match('/^[a-zA-Zа-яёА-ЯЁ\s\-]{1,34}$/u', $this->validator[1]),
             'userAge' => ctype_digit($this->validator[2]) && $this->validator[2] > 0 && $this->validator[2] <= 100,
             'requiredInputs' => $this->validator[0] != '' && $this->validator[1] != '' && $this->validator[2] != ''
         ];
