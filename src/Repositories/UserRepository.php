@@ -14,12 +14,7 @@ class UserRepository implements UserRepositoryInterface
 
     public function __construct()
     {
-        $host = 'ec2-54-224-175-142.compute-1.amazonaws.com';
-        $port = '5432';
-        $dbname = 'dfapr7kgqlrfrn';
-        $user = 'ijqawxufrdqfmu';
-        $password = '6023523a8b3be63ad07224ff92e1321c9ff0d9dd384c59a4a5cad23b5bd539ca';
-        $this->db = new \PDO("pgsql:host=$host;port=$port;dbname=$dbname;user=$user;password=$password");
+        $this->db = new \PDO("pgsql:host=localhost;port=5432;dbname=postgres;user=postgres;password=789741");
     }
 
     /**
@@ -27,7 +22,7 @@ class UserRepository implements UserRepositoryInterface
      */
     public function saveUser(User $user): void
     {
-        $stm = $this->db->prepare('INSERT INTO USERS (name, surname, age) VALUES (?, ?, ?)');
+        $stm = $this->db->prepare('INSERT INTO USERS_FOR_GOOGLE_SHEETS (name, surname, age) VALUES (?, ?, ?)');
         $stm->execute([
             $user->getName(),
             $user->getSurname(),
@@ -40,7 +35,7 @@ class UserRepository implements UserRepositoryInterface
      */
     public function getUsers(): array
     {
-        $stm = $this->db->query('SELECT * FROM USERS WHERE age > 18');
+        $stm = $this->db->query('SELECT * FROM USERS_FOR_GOOGLE_SHEETS WHERE age > 18');
         return $stm->fetchAll(\PDO::FETCH_NUM);
     }
 
@@ -49,7 +44,7 @@ class UserRepository implements UserRepositoryInterface
      */
     public function checkingExistingUser(User $user): int
     {
-        $stm = $this->db->prepare('SELECT COUNT(*) FROM USERS WHERE name = ? AND surname = ? AND age = ?');
+        $stm = $this->db->prepare('SELECT COUNT(*) FROM USERS_FOR_GOOGLE_SHEETS WHERE name = ? AND surname = ? AND age = ?');
         $stm->execute([
             $user->getName(),
             $user->getSurname(),

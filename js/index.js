@@ -10,12 +10,12 @@ function sendForm() {
             dataType: 'json',
             data: inputValues,
             success: function (data) {
-                if (data.code === 200) {
+                if (data.status === 'success') {
                     $('#form-submission-status').html("<p class='alert alert-success' role='alert'>" + data.message + "</p>").fadeIn('slow');
-                    setTimeout("$('#form-submission-status').fadeOut('slow');",4000);
+                    setTimeout("$('#form-submission-status').fadeOut('slow');", 4000);
                 } else {
                     $('#form-submission-status').html("<p class='alert alert-danger' role='alert'>" + data.message + "</p>").fadeIn('slow');
-                    setTimeout("$('#form-submission-status').fadeOut('slow');",4000);
+                    setTimeout("$('#form-submission-status').fadeOut('slow');", 4000);
                 }
             }
         });
@@ -33,7 +33,7 @@ function sendUsersToGoogleSheet() {
             method: 'POST',
             dataType: 'json',
             success: function (data) {
-                if (data.code === 200) {
+                if (data.status === 'success') {
                     $('#google-sheet-send-status').html("<p class='alert alert-success' role='alert'>" + data.message + "</p>").fadeIn('slow');
                     setTimeout("$('#google-sheet-send-status').fadeOut('slow');",4000);
                 } else {

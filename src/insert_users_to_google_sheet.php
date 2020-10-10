@@ -12,7 +12,7 @@ try {
     $googleClient->setAuthConfig(__DIR__ . '/nutnet-backend2.json');
 } catch (Google_Exception $e) {
     $jsonOutput = [
-        'code' => 404,
+        'status' => 'error',
         'message' => $e->getMessage(), $e->getCode()
     ];
 }
@@ -44,8 +44,8 @@ if (empty($response->getValues())) {
 }
 if (empty($insertValues)) {
     $jsonOutput = [
-        'code' => 404,
-        'message' => 'В данный момент все записи из БД уже есть в таблице'
+        'status' => 'error',
+        'message' => 'В данный момент все записи из БД уже есть в таблице или пользователем из БД меньше 19-ти лет'
     ];
 } else {
     $postBody = new Google_Service_Sheets_ValueRange([
@@ -61,7 +61,7 @@ if (empty($insertValues)) {
         $optParams
     );
     $jsonOutput = [
-        'code' => 200,
+        'status' => 'success',
         'message' => 'Данные из БД успешно добавлены в google таблицу'
     ];
 }
