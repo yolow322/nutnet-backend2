@@ -25,10 +25,9 @@ class Validator
     private function RulesForPostInputs(): array
     {
         return [
-            'userName' => preg_match('/^[a-zA-Zа-яёА-ЯЁ]{1,35}$/u', $this->validator[0]),
-            'userSurname' => preg_match('/^[a-zA-Zа-яёА-ЯЁ]{1,35}$/u', $this->validator[1]),
+            'userName' => preg_match('/^([А-Я]{1}[а-яё]{1,34}|[A-Z][a-z]{1,34})$/u', $this->validator[0]),
+            'userSurname' => preg_match('/^([А-Я]{1}[а-яё]{1,34}|[A-Z][a-z]{1,34})$/u', $this->validator[1]),
             'userAge' => ctype_digit($this->validator[2]) && $this->validator[2] > 0 && $this->validator[2] <= 100,
-            'requiredInputs' => $this->validator[0] != '' && $this->validator[1] != '' && $this->validator[2] != ''
         ];
     }
     /**
@@ -43,38 +42,26 @@ class Validator
             switch ($key) {
                 case 'userName':
                     if (!$value) {
-                        $messages = [
+                        $messages[] = [
                             'status' => 'error',
                             'message' => 'Введите имя корректно (состоит только из букв до 35 символов)'
                         ];
-                        break;
                     }
                     break;
                 case 'userSurname':
                     if (!$value) {
-                        $messages = [
+                        $messages[] = [
                             'status' => 'error',
                             'message' => 'Введите фамилию корректно (состоит только из букв до 35 символов)'
                         ];
-                        break;
                     }
                     break;
                 case 'userAge':
                     if (!$value) {
-                        $messages = [
+                        $messages[] = [
                             'status' => 'error',
                             'message' => 'Введите возраст корректно (от 1 до 100)'
                         ];
-                        break;
-                    }
-                    break;
-                case 'requiredInputs':
-                    if (!$value) {
-                        $messages = [
-                            'status' => 'error',
-                            'message' => 'Заполните все поля'
-                        ];
-                        break;
                     }
                     break;
             }

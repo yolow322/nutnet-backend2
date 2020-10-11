@@ -7,7 +7,6 @@ use App\Classes\Validator;
 use App\Repositories\UserRepository;
 
 if (isset($_POST['name'], $_POST['surname'], $_POST['age'])) {
-    $jsonOutput = [];
     $validator = new Validator([
         $_POST['name'],
         $_POST['surname'],

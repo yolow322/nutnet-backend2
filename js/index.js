@@ -14,8 +14,11 @@ function sendForm() {
                     $('#form-submission-status').html("<p class='alert alert-success' role='alert'>" + data.message + "</p>").fadeIn('slow');
                     setTimeout("$('#form-submission-status').fadeOut('slow');", 4000);
                 } else {
-                    $('#form-submission-status').html("<p class='alert alert-danger' role='alert'>" + data.message + "</p>").fadeIn('slow');
-                    setTimeout("$('#form-submission-status').fadeOut('slow');", 4000);
+                    $('#form-submission-status').empty();
+                    $.each(data, function (key, value) {
+                        $('#form-submission-status').append("<p class='alert alert-danger' role='alert'>" + value.message + "</p>").fadeIn('slow');
+                        setTimeout("$('#form-submission-status').fadeOut('slow');", 4000);
+                    });
                 }
             }
         });
@@ -39,6 +42,7 @@ function sendUsersToGoogleSheet() {
                 } else {
                     $('#google-sheet-send-status').html("<p class='alert alert-danger' role='alert'>" + data.message + "</p>").fadeIn('slow');
                     setTimeout("$('#google-sheet-send-status').fadeOut('slow');",4000);
+
                 }
             }
         });
